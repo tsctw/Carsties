@@ -10,3 +10,8 @@
 
 ```dotnet ef database drop```
 
+## Create a new Service
+```dotnet new webapi -o src/MyService -controllers```
+
+## Add the Service to Solution Explorer
+```dotnet sln add src/MyService``` 

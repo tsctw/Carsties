@@ -9,7 +9,19 @@ services:
       - app-network
     volumes:
       - pgdata:/usr/local/opt/postgresql@15/data
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+    ports:
+      - 27017:27017
+    networks:
+      - app-network
+    volumes:
+      - mongodata:/data/db
 networks:
   app-network:
 volumes:
   pgdata:
+  mongodata:
